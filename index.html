@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assests/script.js"></script>
+    <link rel="stylesheet" href="dist/output.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Sora:wght@100..800&display=swap');
+    </style>
+        
+    <title>Document</title>
+</head>
+
+<!-- w-max-1288px  desktop 
+
+Celular -> 390px, 16px de margem lateral, ou 4,1% de margem
+
+-->
+
+<body>
+    <!-- Desconto -- INÍCIO -->
+    <nav class="bg-blue-600 text-white flex items-center justify-center">
+        <span class="text-white font-[500] text-center w-[96vw] py-2 text-sm">
+            Ganhe <strong class="bg-[#6220C1] px-1">R$10,00</strong> 
+            de desconto no seu primeiro pedido. Utilize o cupom 
+            <span class="uppercase font-[200]">DESCONTO10</span>
+        </span>
+    </nav>
+    <!-- Desconto -- FIM -->
+
+    <!-- Header -- INÍCIO -->
+    <!-- 
+        SVG-icon        AVANTI-logo         SVG-shopping-cart
+        < Input-search                       SVG-icon-search>
+    -->
+    <nav class="w-[96vw] mx-auto my-4 relative">
+        <header class="">
+            <nav class="flex justify-between mb-4 w-[92vw] mx-auto">
+                <img src="./assets/img/menu.svg" alt="Menu">
+                <h1>
+                    <img
+                    class="h-7"
+                    src="./assets/img/logo-avanti.png"
+                    alt="Logotipo da empresa Avanti">
+                </h1>
+                <span class="relative">
+                    <img src="./assets/img/shopping-cart.svg" alt="" class="">
+                    <span  id="numItemsInShoppingCart" 
+                        class="absolute top-[-10px] right-[-12px] rounded-full bg-blue-600 text-white w-6 h-6 flex text-center justify-center text-sm pt-[2px]"> 
+                        0
+                     </span>
+                </span>
+            </nav>
+            <nav class=" w-full relative">
+                <input
+                class="w-full border-gray-100 border-4 rounded-lg text-black placeholder-black p-2"
+                type="text"
+                placeholder="Digite aqui o que você procura">
+                <span class="absolute right-4 top-[30%] bottom-1/4 cursor-pointer">
+                    <img src="./assets/img/magnifying-glass.svg" alt="Botão para pesquisar">
+                </span>
+            </nav>
+        </header>
+    </nav>
+
+    
+</body>
+</html>
