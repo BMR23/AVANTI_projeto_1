@@ -6,6 +6,11 @@ html {
     font-family: "Nunito Sans", sans-serif;
 }
 
+.margin-all {
+    @apply  w-[calc(100vw-32px)]  mx-auto
+}
+/* w-[calc(100vw-32px)] */
+
 .swiper-slide {
     @apply flex items-center justify-center text-2xl h-[365px] border-2 border-gray-200 rounded-lg relative mb-10 min-w-[174px] max-w-[174px] p-2 !bg-white
 }
@@ -18,4 +23,9 @@ html {
 
 .custom-next {
     @apply right-0 
+}
+
+.special-p {
+    line-height: 150%;
+    letter-spacing: 5%;
 }
