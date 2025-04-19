@@ -5,3 +5,17 @@
 html {
     font-family: "Nunito Sans", sans-serif;
 }
+
+.swiper-slide {
+    @apply flex items-center justify-center text-2xl h-[365px] border-2 border-gray-200 rounded-lg relative mb-10 min-w-[174px] max-w-[174px] p-2 !bg-white
+}
+
+
+
+.custom-next, .custom-prev {
+    @apply absolute top-[172.5px] bg-white size-6 z-[900] leading-none rounded-full border-2 border-blue-600 text-white items-center
+}
+
+.custom-next {
+    @apply right-0 
+}
