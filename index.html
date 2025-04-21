@@ -45,8 +45,8 @@ Celular -> 390px, 16px de margem lateral, ou 4,1% de margem
     <!-- Desconto -- FIM -->
 
     <!-- Header -- INÍCIO -->
-    <header class="margin-all my-4">
-        <nav class="flex justify-between mb-4 sm:w-[92vw] w-[calc(100vw-45px)] sm:max-w mx-auto">
+    <header class=" my-4">
+        <nav class="flex justify-between mb-4 sm:w-[92vw] margin-all sm:max-w mx-auto">
             <img src="./assets/img/header/menu.svg" alt="Menu">
             <h1>
                 <img
@@ -62,12 +62,13 @@ Celular -> 390px, 16px de margem lateral, ou 4,1% de margem
                     </span>
             </span>
         </nav>
-        <nav class=" sm:w-[96vw] w-[calc(100vw-32px)] relative pt-2 mx-auto">
+        <!-- sm:w-[96vw] w-[calc(100vw-32px)] -->
+        <nav class="px-3 w-full mx-auto relative pt-2">
             <input
-            class="w-full border-gray-100 border-2 rounded-lg text-black placeholder-black p-2"
+            class="w-full border-gray-100 border-2 rounded-xl text-black placeholder-black py-2 px-5"
             type="text"
             placeholder="Digite aqui o que você procura">
-            <span class="absolute right-4 top-[22px] bottom-1/4 cursor-pointer bg-white">
+            <span class="absolute right-8 top-[20px] bottom-1/4 cursor-pointer bg-white">
                 <img src="./assets/img/header/magnifying-glass.svg" alt="Botão para pesquisar">
             </span>
         </nav>
@@ -76,305 +77,335 @@ Celular -> 390px, 16px de margem lateral, ou 4,1% de margem
 
     <main>
         <!-- Imagem de promoção - INÍCIO -->
-        <div class="bg-[#E6E7E9] flex items-center relative">
-            <img
-                class="size-1/2 w-min-[136px]" 
-                src="./assets/img/main/first_image.svg" alt="">
-            <div class="absolute sm:right-[20%] right-[40px] w-[160px] text-center">
-                <h2 class="text-5xl sm:text-7xl text-center"><strong>SUPER</strong> SALE</h2>
-                <nav class="my-5 text-sm sm:text-xl text-[#005CFF] font-bold uppercase whitespace-nowrap">Selected items up to</nav>
-                <nav class="text-4xl sm:text-6xl text-[#005CFF] "><strong>50%OFF</strong></nav>
+        <div class="max-w-[100vw] bg-[#E7E7EA]">
+            <div class="bg-[#E7E7EA] flex items-center relative max-w-[1260px] mx-auto">
+                <img
+                    class="size-1/2 w-min-[136px] block md:hidden"
+                    src="./assets/img/main/first_image.svg" alt="">
+                <img
+                    class="size-1/2 w-min-[136px] hidden md:block"
+                    src="./assets/img/main/first_image_full.svg" alt="">
+                <div class="absolute md:flex md:flex-col md:items-center  sm:right-[20%] right-[12%] w-[160px] text-center ">
+                    <h2 class="text-5xl sm:text-7xl text-center md:flex"><strong>SUPER</strong> SALE</h2>
+                    <nav class="my-5 text-sm sm:text-xl text-[#005CFF] font-bold uppercase whitespace-nowrap">
+                        <span class="block md:hidden sm:text-2xl">Selected items up to
+                        </span>                        
+                        <span class="hidden md:block text-2xl">Itens selecionados com até
+                        </span>                        
+                    </nav>
+                    <nav class="text-4xl sm:text-6xl text-[#005CFF] "><strong>50%OFF</strong></nav>
+                </div>
             </div>
         </div>
         <!-- Imagem de promoção - FIM -->
 
         <!-- Carousel - INÍCIO -->
-        <div class="mt-14 mb-[4.13rem]  max-h-[426px]">
-            <div class="sm:w-[92vw] margin-all my-4 ">
+        <div class="my-14 md:my-24 relative margin-all lg:max-w-[1260px] mx-auto"> <!-- mb-[4.13rem] -->
+            <div class="my-4 ">
                 <div class="flex justify-between text-center">
                     <h2 class="font-bold">Lançamentos</h2>
                     <span class="underline text-sm font-bold text-[#303030] cursor-pointer">Ver mais</span>
                 </div>
             </div>
             <script type="module" src="./scritps/script.js"></script>
-            <div class="swiper sm:w-[92vw] margin-all ">
-                <div id="carousel" class="swiper-wrapper">
-                <!-- Carousel > Card 1 - INÍCIO -->
-                <div class="swiper-slide card ">
-                    <div class="relative">
-                        <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
-                            <span
-                            class="bg-[#00264E] px-2 py-1 rounded-md">
-                                NOVO
-                            </span>
-                        </nav>
-                        <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
-                        class="size-[158px]"
-                        >
-                    </div>
-            
-                    <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                    <div class="flex mt-3 relative">
-                        <div>
-                            <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
-                            <nav class="font-bold text-[1.18rem]">R$79,90</nav>
-                        </div>
-                        <nav id="promo" class="absolute top-[-4px] right-0 text-xs text-white m-1 px-2 py-[4px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
-                    </div>
-                    <span class="text-xs">Ou em até <strong>10x de R$ 7,90</strong> </span>
-                    <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
-                </div>
-                <!-- Carousel > Card 1 - FIM -->
-                    <!-- Carousel > Card 2 - INÍCIO -->
+            <div class="swiper !static">
+                <div id="carousel" class="swiper-wrapper flex "> <!-- gap-[10px] lg:gap-[17px] -->
+                    <!-- Carousel > Card 1 - INÍCIO -->
                     <div class="swiper-slide card ">
-                    <div class="relative">
-                        <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
-                            <span
-                            class="bg-[#00264E] px-2 py-1 rounded-md">
-                                NOVO
-                            </span>
-                        </nav>
-                        <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
-                        class="size-[158px]"
-                        >
-                    </div>
-            
-                    <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                    <div class="flex mt-3 relative">
-                        <div>
-                            <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
-                            <nav class="font-bold text-[1.18rem]">R$79,90</nav>
+                        <div class="relative">
+                            <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
+                                <span
+                                class="bg-[#00264E] px-2 py-1 rounded-md">
+                                    NOVO
+                                </span>
+                            </nav>
+                            <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
+                            class="size-[158px] lg:size-[222px]"
+                            >
                         </div>
-                        <nav id="promo" class="absolute top-[-4px] right-0 text-xs text-white m-1 px-2 py-[2px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
-                    </div>
-                    <span class="text-xs">Ou em até <strong>10x de R$ 7,90</strong> </span>
-                    <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
-                </div>
-                <!-- Carousel > Card 2 - FIM -->
-                    <!-- Carousel > Card 3 - INÍCIO -->
-                    <div class="swiper-slide card ">
-                    <div class="relative">
-                        <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
-                            <span
-                            class="bg-[#00264E] px-2 py-1 rounded-md">
-                                NOVO
-                            </span>
-                        </nav>
-                        <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
-                        class="size-[158px]"
-                        >
-                    </div>
-            
-                    <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                    <div class="flex mt-3 relative">
-                        <div>
-                            <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
-                            <nav class="font-bold text-[1.18rem]">R$79,90</nav>
+                
+                        <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                        <div class="flex mt-3 relative">
+                            <div>
+                                <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
+                                <nav class="font-bold text-[1.18rem]/[100%]">R$79,90</nav>
+                            </div>
+                            <nav id="promo" class="absolute top-[-4px] left-20 text-xs text-white my-2 px-2 py-[4px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
                         </div>
-                        <nav id="promo" class="absolute top-[-4px] right-0 text-xs text-white m-1 px-2 py-[2px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
+                        <span class="text-xs text-[#303030]">Ou em até <strong>10x de R$ 7,90</strong> </span>
+                        <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
                     </div>
-                    <span class="text-xs">Ou em até <strong>10x de R$ 7,90</strong> </span>
-                    <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
-                </div>
-                <!-- Carousel > Card 3 - FIM -->
+                    <!-- Carousel > Card 1 - FIM -->
+                        <!-- Carousel > Card 2 - INÍCIO -->
+                        <div class="swiper-slide card ">
+                            <div class="relative">
+                                <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
+                                    <span
+                                    class="bg-[#00264E] px-2 py-1 rounded-md">
+                                        NOVO
+                                    </span>
+                                </nav>
+                                <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
+                                class="size-[158px] lg:size-[222px]"
+                                >
+                            </div>
+                    
+                            <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                            <div class="flex mt-3 relative">
+                                <div>
+                                    <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
+                                    <nav class="font-bold text-[1.18rem]/[100%]">R$79,90</nav>
+                                </div>
+                                <nav id="promo" class="absolute top-[-4px] left-20 text-xs text-white my-2 px-2 py-[4px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
+                            </div>
+                            <span class="text-xs text-[#303030]">Ou em até <strong>10x de R$ 7,90</strong> </span>
+                            <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
+                        </div>
+                    <!-- Carousel > Card 2 - FIM -->
+                        <!-- Carousel > Card 3 - INÍCIO -->
+                        <div class="swiper-slide card ">
+                            <div class="relative">
+                                <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
+                                    <span
+                                    class="bg-[#00264E] px-2 py-1 rounded-md">
+                                        NOVO
+                                    </span>
+                                </nav>
+                                <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
+                                class="size-[158px] lg:size-[222px]"
+                                >
+                            </div>
+                    
+                            <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                            <div class="flex mt-3 relative">
+                                <div>
+                                    <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
+                                    <nav class="font-bold text-[1.18rem]/[100%]">R$79,90</nav>
+                                </div>
+                                <nav id="promo" class="absolute top-[-4px] left-20 text-xs text-white my-2 px-2 py-[4px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
+                            </div>
+                            <span class="text-xs text-[#303030]">Ou em até <strong>10x de R$ 7,90</strong> </span>
+                            <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
+                        </div>
+                    <!-- Carousel > Card 3 - FIM -->
                     <!-- Carousel > Card 4 - INÍCIO -->
-                    <div class="swiper-slide card ">
-                    <div class="relative">
-                        <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
-                            <span
-                            class="bg-[#00264E] px-2 py-1 rounded-md">
-                                NOVO
-                            </span>
-                        </nav>
-                        <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
-                        class="size-[158px]"
-                        >
-                    </div>
-            
-                    <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                    <div class="flex mt-3 relative">
-                        <div>
-                            <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
-                            <nav class="font-bold text-[1.18rem]">R$79,90</nav>
+                        <div class="swiper-slide card ">
+                            <div class="relative">
+                                <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
+                                    <span
+                                    class="bg-[#00264E] px-2 py-1 rounded-md">
+                                        NOVO
+                                    </span>
+                                </nav>
+                                <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
+                                class="size-[158px] lg:size-[222px]"
+                                >
+                            </div>
+                    
+                            <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                            <div class="flex mt-3 relative">
+                                <div>
+                                    <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
+                                    <nav class="font-bold text-[1.18rem]/[100%]">R$79,90</nav>
+                                </div>
+                                <nav id="promo" class="absolute top-[-4px] left-20 text-xs text-white my-2 px-2 py-[4px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
+                            </div>
+                            <span class="text-xs text-[#303030]">Ou em até <strong>10x de R$ 7,90</strong> </span>
+                            <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
                         </div>
-                        <nav id="promo" class="absolute top-[-4px] right-0 text-xs text-white m-1 px-2 py-[2px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
-                    </div>
-                    <span class="text-xs">Ou em até <strong>10x de R$ 7,90</strong> </span>
-                    <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
-                </div>
-                <!-- Carousel > Card 4 - FIM -->
-                    <!-- Carousel > Card 5 - INÍCIO -->
-                    <div class="swiper-slide card ">
-                    <div class="relative">
-                        <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
-                            <span
-                            class="bg-[#00264E] px-2 py-1 rounded-md">
-                                NOVO
-                            </span>
-                        </nav>
-                        <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
-                        class="size-[158px]"
-                        >
-                    </div>
-            
-                    <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                    <div class="flex mt-3 relative">
-                        <div>
-                            <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
-                            <nav class="font-bold text-[1.18rem]">R$79,90</nav>
+                    <!-- Carousel > Card 4 - FIM -->
+                        <!-- Carousel > Card 5 - INÍCIO -->
+                        <div class="swiper-slide card ">
+                            <div class="relative">
+                                <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
+                                    <span
+                                    class="bg-[#00264E] px-2 py-1 rounded-md">
+                                        NOVO
+                                    </span>
+                                </nav>
+                                <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
+                                class="size-[158px] lg:size-[222px]"
+                                >
+                            </div>
+                    
+                            <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                            <div class="flex mt-3 relative">
+                                <div>
+                                    <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
+                                    <nav class="font-bold text-[1.18rem]/[100%]">R$79,90</nav>
+                                </div>
+                                <nav id="promo" class="absolute top-[-4px] left-20 text-xs text-white my-2 px-2 py-[4px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
+                            </div>
+                            <span class="text-xs text-[#303030]">Ou em até <strong>10x de R$ 7,90</strong> </span>
+                            <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
                         </div>
-                        <nav id="promo" class="absolute top-[-4px] right-0 text-xs text-white m-1 px-2 py-[2px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
-                    </div>
-                    <span class="text-xs">Ou em até <strong>10x de R$ 7,90</strong> </span>
-                    <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
-                </div>
-                <!-- Carousel > Card 5 - FIM -->
-                    <!-- Carousel > Card 6 - INÍCIO -->
-                    <div class="swiper-slide card ">
-                    <div class="relative">
-                        <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
-                            <span
-                            class="bg-[#00264E] px-2 py-1 rounded-md">
-                                NOVO
-                            </span>
-                        </nav>
-                        <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
-                        class="size-[158px]"
-                        >
-                    </div>
-            
-                    <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                    <div class="flex mt-3 relative">
-                        <div>
-                            <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
-                            <nav class="font-bold text-[1.18rem]">R$79,90</nav>
+                    <!-- Carousel > Card 5 - FIM -->
+                        <!-- Carousel > Card 6 - INÍCIO -->
+                        <div class="swiper-slide card ">
+                            <div class="relative">
+                                <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
+                                    <span
+                                    class="bg-[#00264E] px-2 py-1 rounded-md">
+                                        NOVO
+                                    </span>
+                                </nav>
+                                <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
+                                class="size-[158px] lg:size-[222px]"
+                                >
+                            </div>
+                    
+                            <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                            <div class="flex mt-3 relative">
+                                <div>
+                                    <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
+                                    <nav class="font-bold text-[1.18rem]/[100%]">R$79,90</nav>
+                                </div>
+                                <nav id="promo" class="absolute top-[-4px] left-20 text-xs text-white my-2 px-2 py-[4px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
+                            </div>
+                            <span class="text-xs text-[#303030]">Ou em até <strong>10x de R$ 7,90</strong> </span>
+                            <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
                         </div>
-                        <nav id="promo" class="absolute top-[-4px] right-0 text-xs text-white m-1 px-2 py-[2px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
-                    </div>
-                    <span class="text-xs">Ou em até <strong>10x de R$ 7,90</strong> </span>
-                    <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
-                </div>
-                <!-- Carousel > Card 6 - FIM -->
-                    <!-- Carousel > Card 7 - INÍCIO -->
-                    <div class="swiper-slide card ">
-                    <div class="relative">
-                        <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
-                            <span
-                            class="bg-[#00264E] px-2 py-1 rounded-md">
-                                NOVO
-                            </span>
-                        </nav>
-                        <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
-                        class="size-[158px]"
-                        >
-                    </div>
-            
-                    <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                    <div class="flex mt-3 relative">
-                        <div>
-                            <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
-                            <nav class="font-bold text-[1.18rem]">R$79,90</nav>
+                    <!-- Carousel > Card 6 - FIM -->
+                        <!-- Carousel > Card 7 - INÍCIO -->
+                        <div class="swiper-slide card ">
+                            <div class="relative">
+                                <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
+                                    <span
+                                    class="bg-[#00264E] px-2 py-1 rounded-md">
+                                        NOVO
+                                    </span>
+                                </nav>
+                                <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
+                                class="size-[158px] lg:size-[222px]"
+                                >
+                            </div>
+                    
+                            <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                            <div class="flex mt-3 relative">
+                                <div>
+                                    <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
+                                    <nav class="font-bold text-[1.18rem]/[100%]">R$79,90</nav>
+                                </div>
+                                <nav id="promo" class="absolute top-[-4px] left-20 text-xs text-white my-2 px-2 py-[4px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
+                            </div>
+                            <span class="text-xs text-[#303030]">Ou em até <strong>10x de R$ 7,90</strong> </span>
+                            <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
                         </div>
-                        <nav id="promo" class="absolute top-[-4px] right-0 text-xs text-white m-1 px-2 py-[2px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
-                    </div>
-                    <span class="text-xs">Ou em até <strong>10x de R$ 7,90</strong> </span>
-                    <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
-                </div>
-                <!-- Carousel > Card 7 - FIM -->
-                    <!-- Carousel > Card 8 - INÍCIO -->
-                    <div class="swiper-slide card ">
-                    <div class="relative">
-                        <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
-                            <span
-                            class="bg-[#00264E] px-2 py-1 rounded-md">
-                                NOVO
-                            </span>
-                        </nav>
-                        <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
-                        class="size-[158px]"
-                        >
-                    </div>
-            
-                    <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                    <div class="flex mt-3 relative">
-                        <div>
-                            <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
-                            <nav class="font-bold text-[1.18rem]">R$79,90</nav>
+                    <!-- Carousel > Card 7 - FIM -->
+                        <!-- Carousel > Card 8 - INÍCIO -->
+                        <div class="swiper-slide card ">
+                            <div class="relative">
+                                <nav class="absolute top-0 left-0 text-[0.7rem]  text-white ">
+                                    <span
+                                    class="bg-[#00264E] px-2 py-1 rounded-md">
+                                        NOVO
+                                    </span>
+                                </nav>
+                                <img src="./assets/img/main/produto-avanti-Mockup.svg" alt=""
+                                class="size-[158px] lg:size-[222px]"
+                                >
+                            </div>
+                    
+                            <h3 class="capitalize text-gray-700 text-sm mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                            <div class="flex mt-3 relative">
+                                <div>
+                                    <nav id="previous-price" class="line-through text-gray-700 text-sm">R$ 100,00</nav>
+                                    <nav class="font-bold text-[1.18rem]/[100%]">R$79,90</nav>
+                                </div>
+                                <nav id="promo" class="absolute top-[-4px] left-20 text-xs text-white my-2 px-2 py-[4px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
+                            </div>
+                            <span class="text-xs text-[#303030]">Ou em até <strong>10x de R$ 7,90</strong> </span>
+                            <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
                         </div>
-                        <nav id="promo" class="absolute top-[-4px] right-0 text-xs text-white m-1 px-2 py-[2px] whitespace-nowrap rounded-[4px] h-min font-semibold bg-[#5EC0BE]">10% OFF</nav>
-                    </div>
-                    <span class="text-xs">Ou em até <strong>10x de R$ 7,90</strong> </span>
-                    <button class="bg-[#005CFF] text-white text-sm w-full rounded-md py-2 mt-1">Comprar</button>
+                    <!-- Carousel > Card 8 - FIM -->
                 </div>
-                <!-- Carousel > Card 8 - INÍCIO -->
+                <div class="swiper-pagination !bottom-[-31px] lg:!bottom-[-55px]"></div>
+                <div class="custom-prev !hidden lg:!flex lg:justify-center lg:items-center"> 
+                    <img src="assets/img/main/carousel_previous_arrow.svg" alt="Seta para ver produtos anteriores">
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="custom-prev !hidden sm:!block">  </div>
-                <div class="custom-next !hidden sm:!block">  </div>
+                <div class="custom-next !hidden lg:!flex lg:justify-center lg:items-center"> 
+                    <img src="assets/img/main/carousel_next_arrow.svg" alt="Seta para ver próximos produtos">
+                </div>
             </div>
         </div>
         <!-- Carousel - FIM -->
 
         <!-- Image & Description 1 - INÍCIO -->
-        <div class="sm:flex">
+        <div class="max-w-[1177px] mx-auto sm:flex sm:gap-4 md:gap-9 items-center margin-all">
             <img 
-            class="w-full"
+            class="w-full max-w-[652px] bg-[#C2C2C2] "
             src="./assets/img/main/primeiro_banner.svg" 
             alt="">
-            <div class="w-[calc(100%-40px)] mx-auto mt-9 mb-12 text-sm">
-                <h2 class="text-2xl uppercase font-bold">Lorem Ipsum</h2>
-                <p class="text-pretty text-justify py-5">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                <p class="text-pretty text-justify">Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.</p>
+            <div class="margin-all mt-9 mb-12 text-pretty text-justify text-sm max-w-[487px]">
+                <h2 class="text-2xl md:text-3xl uppercase font-bold">Lorem Ipsum</h2>
+                <p class="block md:hidden py-5">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                <p class="block md:hidden">Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.</p>
+
+                <p class="hidden md:block py-5 lg:text-lg">
+                    Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.                  
+                </p>
+                <p class="hidden md:block lg:text-lg">
+                    Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.                                  
+                </p>
             </div>
         </div>
         <!-- Image & Description 1 - FIM -->
         <!-- Image & Description 2 - INÍCIO -->
         <div class=" bg-[#DEDEDE]">
-            <div class="sm:flex margin-all pt-7 mb-14" >
+            <div class="margin-all py-7 mb-14 max-w-[1177px] mx-auto
+            sm:flex sm:flex-row-reverse sm:my-8 sm:gap-9
+            lg:my-[45px] lg:items-center lg:py-[50px]" >
                 <img
-                class="w-full"
+                class="w-full max-w-[652px]  " 
                 src="./assets/img/main/segundo_banner.svg"
-                alt="">
-                <div class="py-7 text-xs">
-                    <h2 class="text-2xl uppercase font-bold text-center">Lorem Ipsum</h2>
-                    <nav class="flex text-center gap-3 justify-between my-3">
+                alt=""> <!-- h-[728px] -->
+                <div class="pt-7 sm:pb-7 text-xs max-w-[476px]">
+                    <h2 class="text-2xl md:text-3xl uppercase font-bold text-center lg:text-[#4F4F4F]">Lorem Ipsum</h2>
+                    <nav class="flex text-center gap-3 justify-between my-3 lg:my-[50px]">
                         <img
-                            class="p-[15px] h-min bg-[#005CFF] rounded-full my-auto"
+                            class="p-[15px] lg:p-[22.5px] h-min bg-[#005CFF] rounded-full my-auto"
                             src="./assets/img/main/icon_localization.svg" 
                             alt=""
                         >
-                        <p class="text-pretty text-justify special-p">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                        <p class="special-p">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
                     </nav>
-                    <nav class="flex text-center gap-3 justify-between my-3">
+                    <nav class="flex text-center gap-3 justify-between my-3 lg:my-0">
                         <img
-                            class="p-[15px] h-min bg-[#005CFF] rounded-full my-auto"
+                            class="p-[15px] lg:p-[22.5px] h-min bg-[#005CFF] rounded-full my-auto"
                             src="./assets/img/main/icon_localization.svg" 
                             alt=""
                         >
-                        <p class="text-pretty text-justify special-p">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                        <p class="special-p">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
                     </nav>
-                    <nav class="flex items-center gap-3 justify-between mt-3">
+                    <nav class="flex items-center gap-3 justify-between mt-3 lg:my-[50px]">
                         <img
-                            class="p-[15px] h-min bg-[#005CFF] rounded-full"
+                            class="p-[15px] lg:p-[22.5px] h-min bg-[#005CFF] rounded-full"
                             src="./assets/img/main/icon_localization.svg" 
                             alt=""
                         >
-                        <p class="text-pretty text-justify special-p">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                        <p class="special-p">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
                     </nav>
                 </div>
             </div>
         </div>
         <!-- Image & Description 2 - FIM -->
-         <!-- Image & Description 3 - INÍCIO -->
-        <div class="sm:flex">
+         <!-- Image & Description 3 - INÍCIO --> 
+         <div class="max-w-[1177px] mx-auto sm:flex sm:gap-4 md:gap-9 items-center margin-all">
             <img 
-            class="w-full"
+            class="w-full max-w-[652px] bg-[#C2C2C2] "
             src="./assets/img/main/primeiro_banner.svg" 
             alt="">
-            <div class="w-[calc(100%-40px)] mx-auto my-9 mb-12 text-sm">
-                <h2 class="text-2xl uppercase font-bold">Lorem Ipsum</h2>
-                <p class="text-pretty text-justify my-5">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                <p class="text-pretty text-justify">Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.</p>
+            <div class="margin-all mt-9 mb-12 text-pretty text-justify text-sm max-w-[487px]">
+                <h2 class="text-2xl md:text-3xl uppercase font-bold">Lorem Ipsum</h2>
+                <p class="block md:hidden py-5">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                <p class="block md:hidden">Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.</p>
+
+                <p class="hidden md:block py-5 lg:text-lg">
+                    Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.                  
+                </p>
+                <p class="hidden md:block lg:text-lg">
+                    Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.                                  
+                </p>
             </div>
         </div>
         <!-- Image & Description 3 - FIM -->
@@ -382,7 +413,9 @@ Celular -> 390px, 16px de margem lateral, ou 4,1% de margem
         <div class="relative w-full h-[440px] overflow-hidden flex items-center mb-14">
             <div class="absolute inset-0 bg-[url('/assets/img/main/terceiro_banner.png')] bg-cover bg-center z-0 blur-[1px] "></div>
             <div class="relative z-10 text-white bg-[#005CFF] mt-2 py-3 h-min text-center text-pretty w-full">
-              <span>Entre em contato conosco e verifique a disponibilidade para sua região!</span>
+              <div class="margin-all">
+                <span>Entre em contato conosco e verifique a disponibilidade para sua região!</span>
+            </div>
             </div>
           </div>
         <!-- Availability - FIM -->
@@ -402,7 +435,7 @@ Celular -> 390px, 16px de margem lateral, ou 4,1% de margem
                         id=""
                         placeholder="Digite seu e-mail">
                     
-                    <nav class="mx-6 flex gap-2">
+                    <nav class="ml-6 flex gap-2">
                         <input type="checkbox" name="" id="">
                         <span class="text-[#656565] font-bold text-xs my-auto">Estou de acordo com a 
                             <strong class="font-bold underline">Política de Privacidade</strong>
@@ -463,14 +496,13 @@ Celular -> 390px, 16px de margem lateral, ou 4,1% de margem
             </div>
 
             <div>
-                <div class="flex justify-between flex-wrap">
+                <div class="flex justify-center items-center flex-wrap w-[85%] mx-auto gap-8 pt-12 pb-10">
                     <img src="assets/img/footer/payments/amex.svg" alt="">
                     <img src="assets/img/footer/payments/santander.svg" alt="">
                     <img src="assets/img/footer/payments/visa.svg" alt="">
                     <img src="assets/img/footer/payments/hipercard.svg" alt="">
                     <img src="assets/img/footer/payments/elo.svg" alt="">
                     <img src="assets/img/footer/payments/duvida.svg" alt="">
-                    <img src="assets/img/footer/payments/" alt="">
                     <img src="assets/img/footer/payments/paypal.svg" alt="">
                     <img src="assets/img/footer/payments/pix.svg" alt="">
                     <img class="border-[1.5px] border-black rounded-sm p-[1.5px]"
@@ -478,8 +510,18 @@ Celular -> 390px, 16px de margem lateral, ou 4,1% de margem
                 </div>
             </div>
         </div>
-        <div class="margin-all text-pretty text-justify">
+        <div class="margin-all text-pretty  py-10 text-xs/[20px] text-[#303030]">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+        </div>
+        <div class=" mx-auto flex gap-12 justify-center mb-4">
+            <div class="flex gap-6 items-center">
+                <img src="./assets/img/footer/lets_encrypt.svg" alt="">
+                <img src="./assets/img/footer/vtex-pci-200.png" alt="">
+            </div>
+            <div class="flex gap-6 items-center">
+                <img class="h-[.6rem]" src="./assets/img/logo-avanti.svg" alt="">
+                <img src="./assets/img/footer/VTEX_Logo.svg" alt="">
+            </div>
         </div>
     </footer>
     
