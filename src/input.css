@@ -16,7 +16,6 @@ html {
 } /* mx-[5px] lg:mx-[7.8px] */
 
 
-
 .custom-next, .custom-prev {
     @apply absolute bottom-[200px] bg-white size-[30px] z-[900] leading-none rounded-full border-2 border-blue-600 text-white items-center !hidden lg:!flex lg:justify-center lg:items-center
 }
@@ -70,7 +69,7 @@ html {
     @apply text-[#005CFF] font-bold
 }
 
-#department_categories #categoriesListWrapper {
+#department_categories .categoriesListWrapper {
     @apply flex gap-32 text-sm
 }
 
@@ -83,18 +82,33 @@ html {
 }
 
 .item-focus {
-    @apply text-[#005CFF] font-bold
+    @apply !text-[#005CFF] font-bold
 }
 
 .transition-max-height {
-    transition: max-height .5s ease;
+    transition: max-height .45s ease;
   }
   .max-h-0 {
     max-height: 0;
     /* margin-top: -10px; */
   }
   .max-h-expanded {
-    max-height: 330px !important;
+    max-height: 320px !important;
     /* margin-top: 0 !important; */
      /* valor suficiente para seu conteúdo */
+  }
+
+  #department_categories {
+    @apply flex h-full gap-[34px] pl-4 pt-3
+  }
+
+
+  #cloneListDepartments {
+    @apply block bg-[#F5F5F5] w-[235px] -ml-4 -mt-3 pt-2
+  }
+  #cloneListDepartments li {
+    @apply relative w-[190px] mx-auto text-[#303030]
+  }
+  #cloneListDepartments li::after {
+    @apply absolute content-['❯'] right-0 text-xs top-[2px]
   }
