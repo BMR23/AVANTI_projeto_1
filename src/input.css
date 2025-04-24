@@ -11,6 +11,8 @@ html {
 }
 /* w-[calc(100vw-32px)] */
 
+
+
 .swiper-slide {
     @apply flex items-center justify-center text-2xl h-[365px] border-2 border-gray-200 rounded-lg relative max-w-[174px] lg:max-w-[238px] p-2 !bg-white 
 } /* mx-[5px] lg:mx-[7.8px] */
@@ -112,3 +114,11 @@ html {
   #cloneListDepartments li::after {
     @apply absolute content-['❯'] right-0 text-xs top-[2px]
   }
+
+  #searchedTextWrapper {
+    @apply absolute w-full mx-6 flex items-center h-7 
+}
+
+#searchedText {
+    @apply text-sm 
+}
