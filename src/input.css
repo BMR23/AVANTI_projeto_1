@@ -9,6 +9,18 @@ html {
 .margin-all {
     @apply  w-[calc(100vw-32px)] sm:w-[calc(100vw-47px)]  mx-auto max-w-[1260px]
 }
+
+@media (max-width: 389px) {
+    .margin-all:not(#menu-sm-first-row) {
+        @apply w-[calc(100vw-16px)]
+    }
+}
+@media (max-width: 374px) {
+    .margin-all:not(#menu-sm-first-row) {
+        @apply w-[calc(100vw-10px)]
+    }
+}
+
 /* w-[calc(100vw-32px)] */
 
 

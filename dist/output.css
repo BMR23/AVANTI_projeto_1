@@ -1385,6 +1385,18 @@ html {
   }
 }
 
+@media (max-width: 389px) {
+  .margin-all:not(#menu-sm-first-row) {
+    width: calc(100vw - 16px);
+  }
+}
+
+@media (max-width: 374px) {
+  .margin-all:not(#menu-sm-first-row) {
+    width: calc(100vw - 10px);
+  }
+}
+
 /* w-[calc(100vw-32px)] */
 
 .swiper-slide {
