@@ -700,6 +700,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+
 .mb-\[4\.13rem\] {
   margin-bottom: 4.13rem;
 }
@@ -742,10 +746,6 @@ video {
 
 .mt-\[-3px\] {
   margin-top: -3px;
-}
-
-.mb-7 {
-  margin-bottom: 1.75rem;
 }
 
 .block {
@@ -1072,10 +1072,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[url\(\'\/assets\/img\/main\/terceiro_banner\.png\'\)\] {
-  background-image: url('/assets/img/main/terceiro_banner.png');
 }
 
 .bg-gradient-to-l {
