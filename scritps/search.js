@@ -52,5 +52,5 @@ function showSearch(wrapper, lg = false) {
         wrapper.classList.remove('mb-7')
         const previousSearch = wrapper.querySelector('#searchedTextWrapper')
         if (previousSearch) previousSearch.remove()
-    }, 8000)
+    }, 5000)
 }
