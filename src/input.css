@@ -7,7 +7,7 @@ html {
 }
 
 .margin-all {
-    @apply  w-[calc(100vw-47px)]  mx-auto max-w-[1260px]
+    @apply  w-[calc(100vw-32px)] sm:w-[calc(100vw-47px)]  mx-auto max-w-[1260px]
 }
 /* w-[calc(100vw-32px)] */
 
