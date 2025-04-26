@@ -27,6 +27,7 @@
     <script type="module" src="./scritps/menu.js"></script>
     <script type="module" src="./scritps/search.js"></script>
     <script type="module" src="./scritps/slides.js"></script>
+    <script type="module" src="./scritps/form.js"></script>
 
     <link rel="icon" type="image/svg+xml" href="https://avantitecnologia.net/assets/frontend/img/favicon.ico" />
     <title>Avanti - Projeto 1</title>
@@ -377,31 +378,38 @@ Celular -> 390px, 16px de margem lateral, ou 4,1% de margem
           </div>
         <!-- Availability - FIM -->
         <!-- Register - INÍCIO  -->
+
          <div class="margin-all mb-10 max-w-[1260px]">
              <h2 class="font-bold text-center mb-4">Cadastra-se na nossa <strong class="text-[#005CFF] font-bold">newsletter</strong></h2>
              <div class="bg-[#F5F5F5] rounded-lg">
-                <form class="py-10 mx-4 text-sm lg:py-16 lg:mx-[114px] lg:flex lg:gap-6" action="" method="">
+                <form
+                class="py-10 mx-4 text-sm lg:py-16 lg:mx-[114px] lg:flex lg:gap-6" id="form-register">
                     <input
+                        id="name"
+                        name="name"
                         class="w-full py-3 px-6 rounded-md placeholder:text-[#303030] lg:my-4"
                         type="text"
-                        placeholder="Digite seu nome">
+                        placeholder="Digite seu nome"
+                        >
                     <input
                         class="my-4 w-full py-3 px-6 rounded-md placeholder:text-[#303030]"
                         type="email"
-                        name=""
-                        id=""
+                        name="email"
                         placeholder="Digite seu e-mail">
                     
                     <nav class="ml-6 flex gap-2">
-                        <input type="checkbox" name="" id="">
+                        <input type="checkbox" name="Politica de Privacidade" id="politicaPrivacidade" required>
                         <span class="text-[#656565] font-bold text-xs my-auto lg:min-w-[127px] xl:whitespace-nowrap ">Estou de acordo com a 
                             <strong class="font-bold underline">Política de Privacidade</strong>
                         </span>
                     </nav>
-                    <button class="text-white font-bold bg-[#005CFF] w-full text-center py-[14px] rounded-md mt-4 lg:my-auto lg:w-min lg:px-6">Cadastrar</button>
+                    <button 
+                    type="submit"
+                    class="text-white font-bold bg-[#005CFF] w-full text-center py-[14px] rounded-md mt-4 lg:my-auto lg:w-min lg:px-6">Cadastrar</button>
                 </form>
              </div>
          </div>
+         
         <!-- Register - FIM  -->
     </main>
     <footer>
