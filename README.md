@@ -1,6 +1,6 @@
-## 📦 Challenge: Ecommerce Home
+## 📦 Desafio: Desenvolvimento do Layout de um Ecommerce
 
-### 🇧🇷 PT-BR
+## 🇧🇷 PT-BR
 
 ### 📝 Objetivo
 
@@ -30,6 +30,8 @@ O desafio final consiste em desenvolver um layout proposto no Figma utilizando *
    - **Carrosséis**: Adicionar interatividade aos elementos deslizantes da página.
 
 ---
+
+## 📦 Challenge: Ecommerce Layout Development
 
 ## 🌍 EN
 
