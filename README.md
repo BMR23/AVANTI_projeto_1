@@ -1,4 +1,4 @@
-## 📦 Desafio: Desenvolvimento do Layout de um Ecommerce
+## 📦 Desafio: Desenvolvimento do Layout
 
 ## 🇧🇷 PT-BR
 
@@ -31,7 +31,7 @@ O desafio final consiste em desenvolver um layout proposto no Figma utilizando *
 
 ---
 
-## 📦 Challenge: Ecommerce Layout Development
+## 📦 Challenge: Layout Development
 
 ## 🌍 EN
 
