@@ -16,7 +16,7 @@ O desafio final consiste em desenvolver um layout proposto no Figma utilizando *
 
 ### 🎨 Layout no Figma
 
-🔗 [Acesse o layout no Figma](https://www.figma.com/design/NsuWd0lNMP7tOBkM9yLsl5/innovation-class--Copy-?node-id=13-673&p=f&t=58U2zvLGuFK7grcq-0)
+🔗 [Acesse o layout no Figma](https://www.figma.com/design/NsuWd0lNMP7tOBkM9yLsl5/innovation-class--Copy-?node-id=13-673&p=f&t=26HWJbr85IuF7VeE-0)
 
 ---
 
