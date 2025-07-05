@@ -10,7 +10,7 @@ O desafio final consiste em desenvolver um layout proposto no Figma utilizando *
 
 ### 🌐 Site em Produção
 
-🔗 [Acesse o site publicado aqui](https://bmr23.github.io/AVANTI_projeto_1/)
+🔗 [Acesse o site publicado aqui](https://bmr23.github.io/Challenge-ecommerce-home/)
 
 ---
 
